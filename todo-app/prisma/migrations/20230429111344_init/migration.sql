@@ -1,11 +1,11 @@
 -- CreateTable
 CREATE TABLE "task" (
-    "id" TEXT NOT NULL,
+    "id" SERIAL NOT NULL,
     "title" TEXT NOT NULL,
     "description" TEXT NOT NULL,
-    "status" TEXT NOT NULL,
+    "status" BOOLEAN NOT NULL DEFAULT false,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updated_at" TIMESTAMP(3) NOT NULL,
+    "updated_at" TIMESTAMP(3),
 
     CONSTRAINT "task_pkey" PRIMARY KEY ("id")
 );

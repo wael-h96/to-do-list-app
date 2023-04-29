@@ -1,4 +1,3 @@
-'use client'
 import React, { FormEvent, useState } from 'react'
 
 interface ISearchBar {

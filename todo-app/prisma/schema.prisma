@@ -1,8 +1,6 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-    provider = "prisma-client-js"
+    provider      = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl", "linux-musl-openssl-3.0.x"]
 }
 
 datasource db {
@@ -11,10 +9,10 @@ datasource db {
 }
 
 model task {
-    id          Int      @id @default(autoincrement())
+    id          Int       @id @default(autoincrement())
     title       String
     description String
-    status      Boolean  @default(false)
-    created_at  DateTime @default(now())
+    status      Boolean   @default(false)
+    created_at  DateTime  @default(now())
     updated_at  DateTime?
 }

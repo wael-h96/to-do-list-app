@@ -32,7 +32,7 @@ const Form: React.FC<IForm> = ({ todo, close }) => {
             setDescription(todo.description)
             setStatus(todo.status)
         }
-    }, [])
+    }, [todo])
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -58,11 +58,11 @@ const Form: React.FC<IForm> = ({ todo, close }) => {
             }
             <div>
                 <label htmlFor="message" className="mb-2 text-sm font-medium text-black-900 dark:text-black">Task title</label>
-                <input required defaultValue={todo?.title || ""} onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Enter title.." className="block p-2.5 w-6/12 m-auto text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                <input required value={title || ""} onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Enter title.." className="block p-2.5 w-6/12 m-auto text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </div>
             <div>
                 <label htmlFor="message" className="block mb-2 text-sm font-medium text-black-900 dark:text-black">Task description</label>
-                <textarea required defaultValue={todo?.description || ""} onChange={(e) => setDescription(e.target.value)} id="message" rows={4} className="block p-2.5 w-6/12 m-auto text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter description..."></textarea>
+                <textarea required value={description || ""} onChange={(e) => setDescription(e.target.value)} id="message" rows={4} className="block p-2.5 w-6/12 m-auto text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter description..."></textarea>
             </div>
 
             <button type="submit" className='mt-2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent roundedfont-bold py-2 px-4 rounded w-6/12 self-center'>{todo ? "Save Changes" : "Add Task"}</button>

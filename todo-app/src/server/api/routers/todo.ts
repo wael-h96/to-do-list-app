@@ -8,17 +8,17 @@ export const todoRouter = createTRPCRouter({
   }),
   addTodo: publicProcedure
     .input(z.object({ title: z.string(), description: z.string() }))
-    .mutation(({ ctx, input }) => {
+    .mutation(async ({ ctx, input }) => {
       const { title, description } = input;
-      return ctx.prisma.task.create({
+      return await ctx.prisma.task.create({
         data: {
           title: title,
           description: description,
         },
       });
     }),
-  deleteTodo: publicProcedure.input(z.number()).mutation(({ ctx, input }) => {
-    return ctx.prisma.task.delete({
+  deleteTodo: publicProcedure.input(z.number()).mutation(async ({ ctx, input }) => {
+    return await ctx.prisma.task.delete({
       where: {
         id: input,
       },
