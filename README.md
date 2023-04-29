@@ -6,7 +6,7 @@ In this app, users can create a new task, update task, search according to task 
 ## Technologies:
 
     - Nextjs 13 for the front-end side (Client side).
-    - trpc - *a light library for building fully typesafe APIs*.
+    - trpc  *a light library for building fully typesafe APIs*.
     - PostgreSql - *open source object-relational database*.
     - Prisma ORM - *a client query builder to interact with databases*.
     - Tailwind for styling.
