@@ -15,11 +15,11 @@ const Card: React.FC<ICard> = ({ todo, showModalToUpdate }) => {
     const { mutate } = api.todo.deleteTodo.useMutation({
         onSettled: async () => {
             await trpc.todo.getAll.invalidate()
+            await trpc.todo.searchTodo.invalidate()
         }
     })
 
     const handleDelete = () => {
-        console.log(id)
         mutate(id)
     }
 
