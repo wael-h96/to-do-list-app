@@ -6,9 +6,9 @@ In this app, users can create a new task, update task, search according to task 
 ## Technologies:
 
     - Nextjs 13 for the front-end side (Client side).
-    - trpc  *a light library for building fully typesafe APIs*.
-    - PostgreSql - *open source object-relational database*.
-    - Prisma ORM - *a client query builder to interact with databases*.
+    - trpc, a light library for building fully typesafe APIs.
+    - PostgreSql, open source object-relational database.
+    - Prisma ORM, a client query builder to interact with databases.
     - Tailwind for styling.
     - Docker.
 
@@ -24,4 +24,4 @@ In this app, users can create a new task, update task, search according to task 
         npm install.
 
     4. In the todo-app directory, run:
-        docker compose up. ( *Two docker images will be generated (t3-app and postgres)* )
+        docker compose up. (Two docker images will be generated (t3-app and postgres))
