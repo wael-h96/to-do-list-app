@@ -15,13 +15,15 @@ In this app, users can create a new task, update task, search according to task 
 ## In order to run the application, follow the instructions below:
 
     1. First thing first, clonse the repositroy using the following command:
-        git clone https://github.com/wael-h96/to-do-list-app.git.
+        git clone https://github.com/wael-h96/to-do-list-app.git
 
-    2. Navigate to the project directory:
-        cd todo-app.
+    2. Navigate to the application directory (./to-do-list-app/todo-app):
+        cd ./to-do-list-app/todo-app
 
     3. Run the following command:
-        npm install.
+        npm install
 
     4. In the todo-app directory, run:
-        docker compose up. (Two docker images will be generated (t3-app and postgres))
+        docker compose up - (Two docker images will be generated (t3-app and postgres))
+
+    The application will be up and running on http://localhost:3000 .
