@@ -6,7 +6,7 @@ interface ISearchBar {
     reset: () => void
 }
 
-const SearchBar = ({ handleSearch, reset }: ISearchBar) => {
+const SearchBar: React.FC<ISearchBar> = ({ handleSearch, reset }) => {
 
     const [query, setQuery] = useState<string>("")
 
